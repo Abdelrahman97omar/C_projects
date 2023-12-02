@@ -1,19 +1,17 @@
-/*
 #include<stdio.h>
 
-    void print_longst_word(char* address_of_first_letter,int no_of_chars)
+    void print_longst_word(char* main_string,int indix_of_first_char,char* empty_string,int 
+    number_of_chars)
     {   
         printf("third function:\n");
-       // char* x;
-        // x=address_of_first_letter;
-
-        for(int i=0 ; i < no_of_chars ; i++)
+        int empty_string_indix=0;
+        for(int i=0 ; i <number_of_chars; i++)
         {
-            printf("%p",(void *)address_of_first_letter+i);
-            printf("third function:\n");
-
-            // printf("%c",*(address_of_first_letter+i));
+            empty_string[i]=main_string[indix_of_first_char+i];
+            printf("%c",empty_string[i]);
         }
+        empty_string[empty_string_indix+1]='\0';
+        printf("\n");
     }
-    */
+
 

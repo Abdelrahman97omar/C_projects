@@ -1,26 +1,25 @@
 #include<stdio.h>
-int count(char* arr, int* no_chars)
+int count(char* arr, int* number_of_chars)
 {
     printf("second function:\n");
     int indix=0;
     int counter=0;
     for(int i=0; arr[i];i++)
     {
-        if(arr[i]!=32)
+        if(arr[i]!=' ')
         {
             counter++;
         }
-
         else
         {
-            if(counter>*no_chars)
+            if(counter>*number_of_chars)
             {
-                *no_chars=counter;
-                counter=0;
-                indix=i;
+                *number_of_chars=counter;
+                indix=i-*number_of_chars;
             }
-        }
-    }
+            counter=0;
+         }
+    } 
 
     return indix;
 }
