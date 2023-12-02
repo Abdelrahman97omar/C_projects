@@ -1,10 +1,8 @@
 #include<stdio.h>
-
 int count(char* arr, int* no_chars)
-
 {
     printf("second function:\n");
-    int address_of_1st = 0;
+    int indix=0;
     int counter=0;
     for(int i=0; arr[i];i++)
     {
@@ -19,10 +17,10 @@ int count(char* arr, int* no_chars)
             {
                 *no_chars=counter;
                 counter=0;
-                address_of_1st= &(arr[i-*no_chars]);
+                indix=i;
             }
         }
     }
-    printf("%d",(i-*no_chars));
-    return address_of_1st;
+
+    return indix;
 }
