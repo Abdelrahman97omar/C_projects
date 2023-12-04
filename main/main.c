@@ -1,23 +1,26 @@
 #include <stdio.h>
 
-int count();
-void print_longst_word();
+//int count();
+//void print_longst_word();
+//void scanString();
+void intToString();
+
 
 int main()
 
-{   printf("first function:\n");
-
+{  
     char name[]="Abdelrahman omar abdelaziztaha ";
-    char longst_string[50];
-    int indix_of_last_letter,Number_of_chars;
+    char empty_string_to_scan[100]="0";
+    char longst_string[100];
+    char number_string[100];
+    int  indix_of_last_letter;
+    int  Number_of_chars=0;
+    int  Number_to_string;
 
-    indix_of_last_letter = count(name, &Number_of_chars); //to count max number
-
-
-    printf("The number of letters in the longest string is: %d \n",Number_of_chars);
-    printf("The indix of the last letter in the longest string is: %d \n",indix_of_last_letter);
-   
-    print_longst_word(name,indix_of_last_letter,longst_string,Number_of_chars);
-   
+    
+    //indix_of_last_letter = count(name, &Number_of_chars); //function to count max number
+    //print_longst_word(name,indix_of_last_letter,longst_string,Number_of_chars); //function
+    //scanString(empty_string_to_scan);
+    intToString(number_string);
     return 0;
 }
