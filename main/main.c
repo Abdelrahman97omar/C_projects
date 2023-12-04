@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-//int count();
-//void print_longst_word();
-//void scanString();
+int count();
+void print_longst_word();
+void scanString();
 void intToString();
 
 
@@ -18,9 +18,9 @@ int main()
     int  Number_to_string;
 
     
-    //indix_of_last_letter = count(name, &Number_of_chars); //function to count max number
-    //print_longst_word(name,indix_of_last_letter,longst_string,Number_of_chars); //function
-    //scanString(empty_string_to_scan);
+    indix_of_last_letter = count(name, &Number_of_chars); //function to count max number
+    print_longst_word(name,indix_of_last_letter,longst_string,Number_of_chars); //function
+    scanString(empty_string_to_scan);
     intToString(number_string);
     return 0;
 }
