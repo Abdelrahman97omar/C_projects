@@ -1,17 +1,36 @@
 #include<stdio.h>
-void counter(int* arr,int size)
-{   
-    int counter=0, max=0,temp=0;
-    int counter_array[10]={0};
 
-    for(int i=0;i<size;i++)
-    {
-        counter_array[arr[i]]++;
-    }
+int find_number(int* arr,int size,int needed_number)
 
-    for(int i=0;i<10;i++)
-    {
-        printf("%d   ",counter_array[i]);
-    }
-    printf("\n");
+{   int indix;
+    int max_limit=(size-1);
+    int min_limit=0;
+    int loop=0;
+
+    do
+    {  
+         printf("loop: %d \n",loop);
+        indix=(max_limit+min_limit)/2;
+        printf("indix:%d \n",indix);
+
+        if (arr[indix]==needed_number)
+        {
+            return indix;
+        }
+
+        else if(needed_number>arr[indix])
+        {
+            min_limit=indix+1;
+        }
+        else if(needed_number<arr[indix])
+        {
+            max_limit=indix-1;
+        }
+
+        loop++;
+    } 
+
+    while (max_limit>=min_limit);
+    return -1;
+   
 }
