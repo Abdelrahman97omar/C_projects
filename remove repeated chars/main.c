@@ -7,10 +7,12 @@ void remove_function();
 int main()
 {
     char str[]="abdelrahman omar abdelaziz taha ";
+    char copy[100]="0";    
 
-    remove_function(str);
 
-    printf("%s",str);
+    remove_function(str,copy);
+
+    printf("%s \n",copy);
 
     return 0;
 }
